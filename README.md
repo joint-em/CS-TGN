@@ -34,7 +34,7 @@ A single GPU should be enough to train models. For large datasets we capped at m
 
   
   
-#### Components
+### Components
 ----------------
 The core component is the models impelemented in `models/` directory. You can find the vanilla CSTGN and CSTGN without GRU as well as attention module. Modelwise, you may enhance the architecture for particular datasets by changing the attention snapshots, number of GCN layers and changing the hidden dimension of models. 
 
@@ -43,11 +43,15 @@ The `train.py` can be used to trained the RNN network of CSTGN. Please read the 
 The `dataset.py` has two classes `QueryFile` and `Snapshot` for representing the query/answer pairs and temporal view of graph at a specific time. 
 
 The `util/` directory contains some codes to parse specific datasets and generate queries. 
-
-#### Dataset Structure
+  
+  
+### Dataset Structure
+----------------
 The graphs and query/answer sets can be in any format but in order to use our train script and dataset utilities these should be in following format. 
-
-##### File Structure
+  
+  
+#### File Structure
+----------------
 Our training script assume that the data stored in the following format:
 ```
 data/
@@ -75,7 +79,7 @@ data/
 
   
   
-##### Graph file and QueryFiles
+#### Graph file and QueryFiles
 ----------------
 The graph files must have the following format. 
 ```
@@ -94,7 +98,7 @@ answer2_node1,answer2_node2
 ```
   
     
-#### Training the Models & Execution
+### Training the Models & Execution
 ----------------
 Finally the models could be trained and evaluated with the following command. 
 
