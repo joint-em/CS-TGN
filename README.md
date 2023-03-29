@@ -1,6 +1,20 @@
 # CS-TGN
+This repository contains the implementation of algorithms, and used datasets of paper ``CS-TGN: Community Search via Temporal Graph Neural Networks`` (ACM The Web Conference Companion 2023  (WWW)). 
 
-This repository contains the code and the instruction for running and reproducing results for Community Search with Temporal Graph Learning.
+
+#### Authors: [Farnoosh Hashemi](https://farnooshha.github.io//), [Ali Behrouz](https://abehrouz.github.io/), [Milad Rezaei Hajidehi](https://www.linkedin.com/in/milad-rezaei-hajidehi-63013773/)
+#### [Link to the paper](https://doi.org/10.1145/3543873.3587654) ([Arxiv](https://arxiv.org/abs/2303.08964))
+#### [Poster]()
+#### [Brief video explanation]()
+
+
+
+### Abstract
+----------------  
+A key graph mining primitive is extracting dense structures from graphs, and this has led to interesting notions such as k-cores which subsequently have been employed as building blocks for capturing the structure of complex networks and for designing efficient approximation algorithms for challenging problems such as finding the densest subgraph. In applications such as biological, social, and transportation networks, interactions between objects span multiple aspects. Multilayer (ML) networks have been proposed for accurately modeling such applications. In this paper, we present FirmCore, a new family of dense subgraphs in ML networks, and show that it satisfies many of the nice properties of k-cores in single-layer graphs. Unlike the state of the art core decomposition of ML graphs, FirmCores have a polynomial time algorithm, making them a powerful tool for understanding the structure of massive ML networks. We also extend FirmCore for directed ML graphs. We show that FirmCores and directed FirmCores can be used to obtain efficient approximation algorithms for finding the densest subgraphs of ML graphs and their directed counterparts. Our extensive experiments over several real ML graphs show that our FirmCore decomposition algorithm is significantly more efficient than known algorithms for core decompositions of ML graphs. Furthermore, it returns solutions of matching or better quality for the densest subgraph problem over (possibly directed) ML graphs.
+
+
+
 
 #### Dependecies & Hardware
 To run our codes you need to have these packages installed:
@@ -85,5 +99,21 @@ For example:
 python3 train.py football 200 1 4 0.4 64 100 0.001 0.00001
 ```
 
-#### Contact & More Info
-For more information, please read our paper at: ANONYMOUS LINK or contact anom@anom.com . 
+
+### Reference
+----------------  
+```
+@inproceedings{CS-TGN,
+author = {Hashemi, Farnoosh and Behrouz, Ali and Rezaei Hajidehi, Milad},
+title = {CS-TGN: Community Search via Temporal Graph Neural Networks},
+year = {2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3543873.3587654},
+doi = {10.1145/3543873.3587654},
+booktitle = {Companion Proceedings of the Web Conference 2023},
+numpages = {8},
+location = {AUSTIN, TEXAS, USA},
+series = {WWW '23}
+}
+```
