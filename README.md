@@ -14,9 +14,11 @@ This repository contains the implementation of algorithms, and used datasets of 
 Searching for local communities is an important research challenge that allows for personalized community discovery and supports advanced data analysis in various complex networks, such as the World Wide Web, social networks, and brain networks. The evolution of these networks over time has motivated several recent studies to identify local communities in temporal networks. Given any query nodes, Community Search aims to find a densely connected subgraph containing query nodes. However, existing community search approaches in temporal networks have two main limitations: (1) they adopt pre-defined subgraph patterns to model communities, which cannot find communities that do not conform to these patterns in real-world networks, and (2) they only use the aggregation of disjoint structural information to measure quality, missing the dynamic of connections and temporal properties. In this paper, we propose a query-driven Temporal Graph Convolutional Network (CS-TGN) that can capture flexible community structures by learning from the ground-truth communities in a data-driven manner. CS-TGN first combines the local query-dependent structure and the global graph embedding in each snapshot of the network and then uses a GRU cell with contextual attention to learn the dynamics of interactions and update node embeddings over time. We demonstrate how this model can be used for interactive community search in an online setting, allowing users to evaluate the found communities and provide feedback. Experiments on real-world temporal graphs with ground-truth communities validate the superior quality of the solutions obtained and the efficiency of our model in both temporal and interactive static settings.
 
 
-
+  
+    
 
 #### Dependecies & Hardware
+----------------
 To run our codes you need to have these packages installed:
 
 ```
@@ -30,7 +32,10 @@ torchmetrics==0.11.0
 
 A single GPU should be enough to train models. For large datasets we capped at most 5GBs of GPU memory.  
 
+  
+  
 #### Components
+----------------
 The core component is the models impelemented in `models/` directory. You can find the vanilla CSTGN and CSTGN without GRU as well as attention module. Modelwise, you may enhance the architecture for particular datasets by changing the attention snapshots, number of GCN layers and changing the hidden dimension of models. 
 
 The `train.py` can be used to trained the RNN network of CSTGN. Please read the Dataset Structure for instruction for using it. 
@@ -68,8 +73,10 @@ data/
         valid_queries.txt
 ```
 
+  
+  
 ##### Graph file and QueryFiles
-
+----------------
 The graph files must have the following format. 
 ```
 node_id1 node_id2
@@ -85,9 +92,10 @@ answer1_node1,answer1_node2,...
 q2_node1,q2_node2,...
 answer2_node1,answer2_node2
 ```
-
+  
+    
 #### Training the Models & Execution
-
+----------------
 Finally the models could be trained and evaluated with the following command. 
 
 ```
