@@ -17,7 +17,7 @@ Searching for local communities is an important research challenge that allows f
   
     
 
-#### Dependecies & Hardware
+### Dependecies & Hardware
 ----------------
 To run our codes you need to have these packages installed:
 
@@ -50,7 +50,7 @@ The `util/` directory contains some codes to parse specific datasets and generat
 The graphs and query/answer sets can be in any format but in order to use our train script and dataset utilities these should be in following format. 
   
   
-#### File Structure
+### File Structure
 ----------------
 Our training script assume that the data stored in the following format:
 ```
@@ -79,7 +79,7 @@ data/
 
   
   
-#### Graph file and QueryFiles
+### Graph file and QueryFiles
 ----------------
 The graph files must have the following format. 
 ```
